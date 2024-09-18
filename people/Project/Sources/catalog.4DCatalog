@@ -2,7 +2,7 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="people" uuid="FB6FF69244AD411DA989F328AE929FA7" collation_locale="ja">
 	<schema name="DEFAULT_SCHEMA"/>
-	<table name="顧客" uuid="FA5B78898BA341D1B3815D057A528BCE" id="1" prevent_journaling="true">
+	<table name="顧客" uuid="FA5B78898BA341D1B3815D057A528BCE" id="1">
 		<field name="Id" uuid="6A4C40C87D1D452A95B0D64160993306" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
 		<field name="名前" uuid="0241F2F59DCB4D1F8F4360F32DB14B46" type="10" limiting_length="255" id="2"/>
 		<field name="名前フリガナ" uuid="72F7F456881E491388F9189116BE1751" type="10" limiting_length="30" id="3"/>
