@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="2">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="4">
 	<com.4d>
 		<compiler>
 			<options target="all"/>
 		</compiler>
+		<interface>
+			<user sdi_application="true" splash_screen="false"/>
+		</interface>
 	</com.4d>
 </preferences>

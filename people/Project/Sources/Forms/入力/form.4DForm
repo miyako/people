@@ -13,6 +13,7 @@
 	"bottomMargin": 20,
 	"events": [
 		"onDataChange",
+		"onUnload",
 		"onAfterEdit"
 	],
 	"windowTitle": "顧客",

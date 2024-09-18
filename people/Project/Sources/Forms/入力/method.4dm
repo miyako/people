@@ -21,4 +21,15 @@ Case of
 				
 		End case 
 		
+	: ($event.code=On Unload:K2:2)
+		
+		If (Is Windows:C1573)
+			WINDOW LIST:C442($windows)
+			
+			If (Size of array:C274($windows)=1)
+				QUIT 4D:C291
+			End if 
+			
+		End if 
+		
 End case 
