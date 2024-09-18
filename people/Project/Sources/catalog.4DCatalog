@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="people" uuid="FB6FF69244AD411DA989F328AE929FA7" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="顧客" uuid="FA5B78898BA341D1B3815D057A528BCE" id="1" prevent_journaling="true">
+		<field name="Id" uuid="6A4C40C87D1D452A95B0D64160993306" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="名前" uuid="0241F2F59DCB4D1F8F4360F32DB14B46" type="10" limiting_length="255" id="2"/>
+		<field name="名前フリガナ" uuid="72F7F456881E491388F9189116BE1751" type="10" limiting_length="30" id="3"/>
+		<field name="性別" uuid="EC12DADC206E435BACD1849B004DEC88" type="10" limiting_length="1" id="4"/>
+		<field name="血液型" uuid="192D0925627B48AA990C0BFBE46A87D4" type="10" limiting_length="2" id="5"/>
+		<field name="生年月日" uuid="B388F2814CB8433EAC7F17FFC312A904" type="8" id="6"/>
+		<field name="電話番号" uuid="E7B4B7F20AE44FCB9E88D1A7F75A39F7" type="10" limiting_length="255" id="7"/>
+		<field name="携帯番号" uuid="EF09D9643DEB409E8039AA2F14EE077F" type="10" limiting_length="255" id="8"/>
+		<field name="メール" uuid="C27741BBBCA04FCAA8E505B3EF300079" type="10" limiting_length="255" id="9"/>
+		<field name="郵便番号" uuid="8182CCF5FF974A668AC5D4EFD9EBEFAF" type="10" limiting_length="255" id="10"/>
+		<field name="住所" uuid="EAF1ACB5996240C2917AABE8749C8DE3" type="10" limiting_length="255" id="11"/>
+		<field name="住所フリガナ" uuid="C260B2D835284A4B8FA412F9C19C1568" type="10" limiting_length="255" id="12"/>
+		<primary_key field_name="Id" field_uuid="6A4C40C87D1D452A95B0D64160993306"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="B8507FD7BCF14CE1A8340966F3DFB050" type="7">
+		<field_ref uuid="6A4C40C87D1D452A95B0D64160993306" name="Id">
+			<table_ref uuid="FA5B78898BA341D1B3815D057A528BCE" name="顧客"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

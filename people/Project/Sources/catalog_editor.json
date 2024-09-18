@@ -1,0 +1,19 @@
+{
+	"tables": {
+		"顧客": {
+			"color": {
+				"red": 226,
+				"green": 158,
+				"blue": 214,
+				"alpha": 255
+			},
+			"coordinates": {
+				"left": 0,
+				"top": 0,
+				"width": 127.8046875,
+				"height": 427.45703125
+			},
+			"displayable_fields_count": 18
+		}
+	}
+}
