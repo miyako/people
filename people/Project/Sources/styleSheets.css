@@ -1,3 +1,15 @@
+input.displayOnly {
+	enterable: false;
+	fill: transparent;
+	border-style: none;
+	stroke: #6666CC;
+}
+
+text.title {
+	font-weight: bold;
+	text-align: right;
+}
+
 .special {
 	
 	font-weight: bold;

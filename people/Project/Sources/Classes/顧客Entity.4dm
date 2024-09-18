@@ -1,86 +1,60 @@
 Class extends Entity
 
-Function get 表示名() : Text
+Function 商品別販売実績($商品名 : Text) : Collection
+	
+	$stats:=[]
+	
+	$販売:=This:C1470.販売.query("商品.商品名 == :1"; $商品名)
+	
+	For each ($販売月; $販売.販売月)
+		$月別販売実績:=$販売.query("販売月 == :1"; $販売月)
+		$stats.push({販売月: $販売月; count: $月別販売実績.sum("数"); dates: $月別販売実績.toCollection("日付,数")})
+	End for each 
+	
+	return $stats
+	
+Function 月別販売実績($販売月 : Integer) : Collection
+	
+	$stats:=[]
+	
+	$販売:=This:C1470.販売.query("販売月 == :1"; $販売月)
+	
+	For each ($商品; $販売.商品)
+		$商品別販売実績:=$販売.query("商品Id == :1 order by 日付 asc"; $商品.Id)
+		$stats.push({商品名: $商品.商品名; count: $商品別販売実績.sum("数"); dates: $商品別販売実績.toCollection("日付,数")})
+	End for each 
+	
+	return $stats
+	
+local Function get 表示名() : Text
 	
 	return This:C1470.名前+"（"+This:C1470.名前フリガナ+"）"
 	
-Function get 年齢() : Integer
+local Function get 年齢() : Integer
 	
-	return This:C1470._年齢()
+	return ds:C1482.年齢(Current date:C33; This:C1470.生年月日)
 	
-Function _年齢() : Integer
+local Function get タイトル() : Text
 	
-	$currentDate:=Current date:C33
-	$birthDate:=This:C1470.生年月日
+	If (This:C1470.isNew())
+		return ["顧客 ("; "新規"; ")"].join("")
+	Else 
+		return ["顧客 ("; This:C1470.getKey(dk key as string:K85:16); ")"].join("")
+	End if 
 	
-	C_LONGINT:C283($years; $months; $days)
+local Function displayDetail()
 	
-	$birthYear:=Year of:C25($birthDate)
-	$birthMonth:=Month of:C24($birthDate)
-	$birthDay:=Day of:C23($birthDate)
+	$processName:="顧客"
+	$formName:="詳細"
+	$windowTitle:=This:C1470.タイトル
 	
-	$currentYear:=Year of:C25($currentDate)
-	$currentMonth:=Month of:C24($currentDate)
-	$currentDay:=Day of:C23($currentDate)
-	
-	$thisBirthDay:=Add to date:C393(!00-00-00!; $currentYear; $birthMonth; $birthDay)
-	
-	//get years and months
-	$years:=$currentYear-$birthYear
-	$months:=$currentMonth-$birthMonth
-	
-	Case of 
-		: (Month of:C24($birthDate)=2) & (Month of:C24($thisBirthDay)=3) & ($currentDate=$thisBirthDay)
-			//today=birthday this year=mar 1, birthday is feb 29
-			$months:=0
-			$days:=0
-		: (Month of:C24($birthDate)=2) & (Month of:C24($thisBirthDay)=3) & ($currentDate>$thisBirthDay) & ($currentMonth=3)
-			//birthday this year is in the past, birthday is feb 29, current year is not leap
-			$months:=0
-			$days:=$currentDay-1
-		: (Month of:C24($birthDate)=2) & (Month of:C24($thisBirthDay)=3) & ($currentMonth=1)
-			//birthday this year is in the future, birthday is feb 29, current year is not leap, count days from previous month=dec
-			$years:=$years-1
-			$months:=$months+12
-			$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear-1; 12; $birthDay)
-		: (Month of:C24($birthDate)=2) & (Month of:C24($thisBirthDay)=3)
-			//birthday this year is in the past, birthday is feb 29, current year is not leap, count days from previous month
-			$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear; $currentMonth-1; $birthDay)
-		: ($currentDate<$thisBirthDay) & ($birthDay>$currentDay) & ($currentMonth=1)
-			//birthday this year is in the future, count days from previous month=dec
-			$years:=$years-1
-			$months:=$months+11
-			$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear-1; 12; $birthDay)
-		: ($currentDate<$thisBirthDay) & ($birthDay>$currentDay)
-			//birthday this year is in the future, count days from previous month
-			$years:=$years-1
-			$months:=$months+11
-			$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear; $currentMonth-1; $birthDay)
-		: ($currentDate<$thisBirthDay)
-			//birthday this year is in the future, count days from current month
-			$years:=$years-1
-			$months:=$months+12
-			$days:=$currentDay-$birthDay
-		: ($currentDate=$thisBirthDay)
-			//today=birthday 
-			$months:=0
-			$days:=0
-		: ($birthDay>$currentDay) & ($currentMonth=1)
-			//birthday this year is in the past, count days from previous month=dec
-			$months:=$months-1
-			$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear; $currentMonth-1; $birthDay)
-		: ($birthDay>$currentDay)
-			//birthday this year is in the past, count days from previous month
-			$months:=$months-1
-			$lastDayOfPreviousMonth:=Day of:C23(Add to date:C393(!00-00-00!; $currentYear; $currentMonth; 1)-1)
-			If ($lastDayOfPreviousMonth>$birthDay)
-				$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear; $currentMonth-1; $birthDay)
-			Else 
-				$days:=$currentDate-Add to date:C393(!00-00-00!; $currentYear; $currentMonth-1; $lastDayOfPreviousMonth)
-			End if 
-		Else 
-			//birthday this year is in the past, count days from current month
-			$days:=$currentDay-$birthDay
-	End case 
-	
-	return $years
+	var $selection : 4D:C1709.EntitySelection
+	$selection:=This:C1470.getSelection()
+	CALL WORKER:C1389($processName; ds:C1482.dialog; {\
+		formName: $formName; \
+		tableNumber: This:C1470.getDataClass().getInfo().tableNumber; \
+		windowTitle: $windowTitle; \
+		controllerClass: cs:C1710._Dialog顧客詳細; \
+		key: (This:C1470.isNew() ? Null:C1517 : This:C1470.getKey()); \
+		selection: ($selection#Null:C1517 ? $selection : Null:C1517); \
+		idx: ($selection#Null:C1517 ? This:C1470.indexOf() : Null:C1517)})

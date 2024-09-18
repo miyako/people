@@ -16,10 +16,84 @@
 		<field name="住所" uuid="EAF1ACB5996240C2917AABE8749C8DE3" type="10" limiting_length="255" id="11"/>
 		<field name="住所フリガナ" uuid="C260B2D835284A4B8FA412F9C19C1568" type="10" limiting_length="255" id="12"/>
 		<primary_key field_name="Id" field_uuid="6A4C40C87D1D452A95B0D64160993306"/>
+		<table_extra input_form="リスト"/>
 	</table>
+	<table name="商品" uuid="772DA91202B344A9BA3FD39393531DB6" id="2">
+		<field name="Id" uuid="C91C6F7C90D74C29A9BB87107843A99B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="商品名" uuid="8A26680F1FBC45438E42795AC820C57A" type="10" limiting_length="255" id="2"/>
+		<field name="価格" uuid="43FE5A7356984B758365475839736ED0" type="6" id="3"/>
+		<primary_key field_name="Id" field_uuid="C91C6F7C90D74C29A9BB87107843A99B"/>
+	</table>
+	<table name="販売" uuid="2EBC4193CC9B4999A30C8718939D303F" id="3">
+		<field name="Id" uuid="C9E3982073484246A288A1762FDAFBB2" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="顧客Id" uuid="178FD80E74A9401D946F2090D4AE32DB" type="10" store_as_UUID="true" id="2"/>
+		<field name="商品Id" uuid="B1D3791C17204E018E8E4FD9F6DCF032" type="4" id="3"/>
+		<field name="数" uuid="80D0A40712604F7C80BBE1574C24579C" type="4" id="4"/>
+		<field name="日付" uuid="0EAA4200E230496386A53937A7C7843C" type="8" id="5"/>
+		<primary_key field_name="Id" field_uuid="C9E3982073484246A288A1762FDAFBB2"/>
+	</table>
+	<relation uuid="83257D2276574CCB803347B1527FB8F8" name_Nto1="顧客" name_1toN="販売" state="1">
+		<related_field kind="source">
+			<field_ref uuid="178FD80E74A9401D946F2090D4AE32DB" name="顧客Id">
+				<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6A4C40C87D1D452A95B0D64160993306" name="Id">
+				<table_ref uuid="FA5B78898BA341D1B3815D057A528BCE" name="顧客"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="FD2D3DF5CFB44FE196A83570AE1C9580" name_Nto1="商品" name_1toN="販売" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B1D3791C17204E018E8E4FD9F6DCF032" name="商品Id">
+				<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="C91C6F7C90D74C29A9BB87107843A99B" name="Id">
+				<table_ref uuid="772DA91202B344A9BA3FD39393531DB6" name="商品"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="066355DC77DE46A9973A0527212D3D02" type="7">
+		<field_ref uuid="C9E3982073484246A288A1762FDAFBB2" name="Id">
+			<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="088BFAB3C2534DE5BFAE7E7155CEB772" type="3">
+		<field_ref uuid="80D0A40712604F7C80BBE1574C24579C" name="数">
+			<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="448E5A5874BF4982B1817A14ABFB8827" type="7">
+		<field_ref uuid="C91C6F7C90D74C29A9BB87107843A99B" name="Id">
+			<table_ref uuid="772DA91202B344A9BA3FD39393531DB6" name="商品"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="525AA07784854B968255D75F71C71343" type="3">
+		<field_ref uuid="B1D3791C17204E018E8E4FD9F6DCF032" name="商品Id">
+			<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="83BCBD4AD3F54095BA2B11292A9A1EBD" type="1">
+		<field_ref uuid="8A26680F1FBC45438E42795AC820C57A" name="商品名">
+			<table_ref uuid="772DA91202B344A9BA3FD39393531DB6" name="商品"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9B3837F2F88A4300B6EC2AE40E4A6706" type="1">
+		<field_ref uuid="0EAA4200E230496386A53937A7C7843C" name="日付">
+			<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
+		</field_ref>
+	</index>
 	<index kind="regular" unique_keys="true" uuid="B8507FD7BCF14CE1A8340966F3DFB050" type="7">
 		<field_ref uuid="6A4C40C87D1D452A95B0D64160993306" name="Id">
 			<table_ref uuid="FA5B78898BA341D1B3815D057A528BCE" name="顧客"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F19828FD439C45609C185E03CA3A9093" type="3">
+		<field_ref uuid="178FD80E74A9401D946F2090D4AE32DB" name="顧客Id">
+			<table_ref uuid="2EBC4193CC9B4999A30C8718939D303F" name="販売"/>
 		</field_ref>
 	</index>
 	<base_extra>

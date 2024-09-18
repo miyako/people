@@ -1,0 +1,327 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 651,
+	"windowMinHeight": 481,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDataChange",
+		"onUnload",
+		"onSelectionChange",
+		"onAfterEdit"
+	],
+	"windowTitle": "顧客",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Cancel": {
+					"type": "button",
+					"text": "閉じる",
+					"top": 437,
+					"left": 518,
+					"width": 113,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"顧客": {
+					"type": "listbox",
+					"left": 20,
+					"top": 140,
+					"width": 611,
+					"height": 277,
+					"events": [],
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"alternateFill": "automaticAlternate",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.顧客.col",
+					"currentItemSource": "Form:C1466.顧客.item",
+					"selectedItemsSource": "Form:C1466.顧客.sel",
+					"currentItemPositionSource": "Form:C1466.顧客.pos",
+					"staticColumnCount": 4,
+					"columns": [
+						{
+							"header": {
+								"text": "名前",
+								"name": "Header1",
+								"class": "special"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.表示名",
+							"enterable": false,
+							"truncateMode": "none",
+							"width": 190,
+							"minWidth": 190
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "住所",
+								"fontWeight": "bold",
+								"class": "special"
+							},
+							"name": "Column5",
+							"dataSource": "This:C1470.住所",
+							"footer": {
+								"name": "Footer5",
+								"variableCalculation": "count"
+							},
+							"truncateMode": "none",
+							"width": 240,
+							"minWidth": 240
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "血液型",
+								"class": "special"
+							},
+							"name": "Column4",
+							"dataSource": "This:C1470.血液型",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 80,
+							"minWidth": 80,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "性別",
+								"class": "special"
+							},
+							"name": "Column6",
+							"dataSource": "This:C1470.性別",
+							"width": 30,
+							"footer": {
+								"name": "Footer6"
+							},
+							"minWidth": 30,
+							"textAlign": "center"
+						}
+					]
+				},
+				"検索窓": {
+					"type": "input",
+					"left": 20,
+					"top": 28,
+					"width": 232,
+					"height": 17,
+					"dataSource": "Form:C1466.検索窓",
+					"placeholder": "名前または住所で検索…",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"血液型.A": {
+					"type": "checkbox",
+					"text": "A型",
+					"top": 14,
+					"left": 258,
+					"width": 58,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.血液型.A",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"血液型.O": {
+					"type": "checkbox",
+					"text": "O型",
+					"top": 40,
+					"left": 258,
+					"width": 58,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.血液型.O",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"血液型.B": {
+					"type": "checkbox",
+					"text": "B型",
+					"top": 13,
+					"left": 318,
+					"width": 58,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.血液型.B",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"血液型.AB": {
+					"type": "checkbox",
+					"text": "AB型",
+					"top": 40,
+					"left": 318,
+					"width": 58,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.血液型.AB",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"性別.男": {
+					"type": "radio",
+					"text": "男性",
+					"top": 21,
+					"left": 416,
+					"width": 50,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "Form:C1466.性別.男",
+					"radioGroup": "性別",
+					"focusable": false
+				},
+				"性別.女": {
+					"type": "radio",
+					"text": "女性",
+					"top": 21,
+					"left": 478,
+					"width": 50,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "Form:C1466.性別.女",
+					"radioGroup": "性別",
+					"focusable": false
+				},
+				"性別.女1": {
+					"type": "radio",
+					"text": "どちらも",
+					"top": 21,
+					"left": 541,
+					"width": 90,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "Form:C1466.性別.どちらも",
+					"radioGroup": "性別",
+					"focusable": false
+				},
+				"検索条件.性別": {
+					"type": "input",
+					"left": 503,
+					"top": 71,
+					"width": 124,
+					"height": 17,
+					"dataSource": "Form:C1466.検索条件.性別",
+					"class": "displayOnly"
+				},
+				"検索条件.血液型": {
+					"type": "input",
+					"left": 259,
+					"top": 71,
+					"width": 184,
+					"height": 17,
+					"dataSource": "Form:C1466.検索条件.血液型.join(\",\")",
+					"class": "displayOnly"
+				},
+				"検索条件.検索窓": {
+					"type": "input",
+					"left": 23,
+					"top": 71,
+					"width": 184,
+					"height": 17,
+					"dataSource": "Form:C1466.検索条件.検索窓.join(\",\")",
+					"class": "displayOnly"
+				},
+				"追加": {
+					"type": "button",
+					"text": "追加",
+					"top": 437,
+					"left": 18,
+					"width": 113,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"action": "",
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"削除": {
+					"type": "button",
+					"text": "削除",
+					"top": 437,
+					"left": 140,
+					"width": 113,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"action": "",
+					"sizingX": "fixed",
+					"sizingY": "move"
+				}
+			},
+			"entryOrder": [
+				"検索窓",
+				"顧客",
+				"Cancel",
+				"血液型.A",
+				"血液型.O",
+				"血液型.B",
+				"血液型.AB",
+				"性別.男",
+				"性別.女",
+				"性別.女1",
+				"検索条件.性別",
+				"検索条件.血液型",
+				"検索条件.検索窓",
+				"追加",
+				"削除"
+			]
+		}
+	],
+	"geometryStamp": 312,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

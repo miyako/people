@@ -1,0 +1,280 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 651,
+	"windowMinHeight": 481,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange",
+		"onUnload"
+	],
+	"windowTitle": "",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Cancel": {
+					"type": "button",
+					"text": "閉じる",
+					"top": 437,
+					"left": 518,
+					"width": 113,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"名前": {
+					"type": "input",
+					"left": 104,
+					"top": 27,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.名前"
+				},
+				"First": {
+					"type": "button",
+					"text": "First",
+					"top": 437,
+					"left": 18,
+					"width": 113,
+					"height": 24,
+					"events": [],
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Previous": {
+					"type": "button",
+					"text": "Previous",
+					"top": 437,
+					"left": 140,
+					"width": 113,
+					"height": 24,
+					"events": [],
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Next": {
+					"type": "button",
+					"text": "Next",
+					"top": 437,
+					"left": 262,
+					"width": 113,
+					"height": 24,
+					"events": [],
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Last": {
+					"type": "button",
+					"text": "Last",
+					"top": 437,
+					"left": 384,
+					"width": 113,
+					"height": 24,
+					"events": [],
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Save": {
+					"type": "button",
+					"text": "保存",
+					"top": 397,
+					"left": 518,
+					"width": 113,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"性別": {
+					"type": "input",
+					"left": 104,
+					"top": 67,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.性別"
+				},
+				"血液型": {
+					"type": "input",
+					"left": 104,
+					"top": 107,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.血液型"
+				},
+				"生年月日": {
+					"type": "input",
+					"left": 104,
+					"top": 147,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.生年月日"
+				},
+				"電話番号": {
+					"type": "input",
+					"left": 104,
+					"top": 187,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.電話番号"
+				},
+				"携帯番号": {
+					"type": "input",
+					"left": 104,
+					"top": 227,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.携帯番号"
+				},
+				"メール": {
+					"type": "input",
+					"left": 104,
+					"top": 267,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.メール"
+				},
+				"郵便番号": {
+					"type": "input",
+					"left": 104,
+					"top": 307,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.郵便番号"
+				},
+				"住所": {
+					"type": "input",
+					"left": 104,
+					"top": 347,
+					"width": 242,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.住所"
+				},
+				"住所フリガナ": {
+					"type": "input",
+					"left": 424,
+					"top": 347,
+					"width": 202,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.住所フリガナ"
+				},
+				"名前フリガナ": {
+					"type": "input",
+					"left": 424,
+					"top": 27,
+					"width": 202,
+					"height": 17,
+					"dataSource": "Form:C1466.顧客.名前フリガナ"
+				},
+				"Text": {
+					"type": "text",
+					"text": "名前:",
+					"top": 27,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "性別:",
+					"top": 67,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "血液型:",
+					"top": 107,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "生年月日:",
+					"top": 147,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "電話番号:",
+					"top": 187,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "携帯番号:",
+					"top": 227,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "メール:",
+					"top": 267,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "郵便番号:",
+					"top": 307,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "住所:",
+					"top": 347,
+					"left": 10,
+					"width": 77,
+					"height": 16,
+					"class": "title"
+				}
+			}
+		}
+	],
+	"geometryStamp": 170,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"rightMargin": 20,
+	"bottomMargin": 20
+}

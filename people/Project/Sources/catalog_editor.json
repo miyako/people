@@ -1,5 +1,35 @@
 {
 	"tables": {
+		"販売": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 216.77734375,
+				"top": 30.4453125,
+				"width": 120,
+				"height": 167.33203125
+			},
+			"displayable_fields_count": 6
+		},
+		"商品": {
+			"color": {
+				"red": 224,
+				"green": 234,
+				"blue": 104,
+				"alpha": 255
+			},
+			"coordinates": {
+				"left": 457,
+				"top": 0,
+				"width": 120,
+				"height": 167.33203125
+			},
+			"displayable_fields_count": 6
+		},
 		"顧客": {
 			"color": {
 				"red": 226,
@@ -10,10 +40,28 @@
 			"coordinates": {
 				"left": 0,
 				"top": 0,
-				"width": 127.8046875,
-				"height": 427.45703125
+				"width": 125,
+				"height": 293.33203125
 			},
-			"displayable_fields_count": 18
+			"displayable_fields_count": 12
+		}
+	},
+	"relations": {
+		"FD2D3DF5CFB44FE196A83570AE1C9580": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			}
+		},
+		"83257D2276574CCB803347B1527FB8F8": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			}
 		}
 	}
 }
