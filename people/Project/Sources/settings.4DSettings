@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="4">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="9">
 	<com.4d>
 		<compiler>
 			<options target="all"/>
@@ -6,5 +6,14 @@
 		<interface>
 			<user sdi_application="true" splash_screen="false"/>
 		</interface>
+		<web>
+			<standalone_server>
+				<rest launch_at_startup="true"/>
+				<configuration publish_at_startup="true" session_mode="1"/>
+				<options>
+					<web_passwords kind="2"/>
+				</options>
+			</standalone_server>
+		</web>
 	</com.4d>
 </preferences>
