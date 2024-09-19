@@ -1,3 +1,20 @@
+# Data folder
+[dD][aA][tT][aA]/
 
+# Derived data
+DerivedData/
+
+# Libraries
+Libraries/
+
+# User preferences
+userPreferences.*/
+
+# Uncomment (remove the following # ) to ignore Trash
+# Project/Trash
+
+# System files
+.DS_Store
+ehthumbs.db
+Thumbs.db
 people/Settings/buildApp.4DSettings
-people/backupHistory.json
