@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="introduction-to-oop" uuid="0999A8B7C2A44F9090F29772E65817C7" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="PEOPLE" uuid="675B621D50DA4BEDB5A41DA94ECF17FA" id="1">
+		<field name="Id" uuid="C6972BF793B94D68BC2A08D76E7A6A90" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="object" uuid="6A9419B3DF5946318CCA9255E2999C28" type="21" blob_switch_size="2147483647" id="2"/>
+		<primary_key field_name="Id" field_uuid="C6972BF793B94D68BC2A08D76E7A6A90"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="195.65625" top="49.03515625" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" uuid="8E5E67581224430E86475BF7396E6B56" type="3">
+		<field_ref uuid="6A9419B3DF5946318CCA9255E2999C28" name="object">
+			<table_ref uuid="675B621D50DA4BEDB5A41DA94ECF17FA" name="PEOPLE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D8A8D89CD2564F388DE57DE935FBAE78" type="7">
+		<field_ref uuid="C6972BF793B94D68BC2A08D76E7A6A90" name="Id">
+			<table_ref uuid="675B621D50DA4BEDB5A41DA94ECF17FA" name="PEOPLE"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

@@ -1,0 +1,66 @@
+{
+	"step_01 インスタンス": {
+		"methods": [
+			"step_01",
+			"test_年齢",
+			"年齢"
+		]
+	},
+	"step_02 クラス": {
+		"methods": [
+			"step_02"
+		],
+		"classes": [
+			"Age",
+			"Person"
+		]
+	},
+	"step_03 継承": {
+		"methods": [
+			"step_03"
+		],
+		"classes": [
+			"Student",
+			"YearLevel"
+		]
+	},
+	"step_04 プロトタイプ": {
+		"methods": [
+			"step_04"
+		]
+	},
+	"step_05_多様性": {
+		"methods": [
+			"step_05"
+		],
+		"classes": [
+			"Contact"
+		]
+	},
+	"step_06_データベース": {
+		"tables": [
+			"PEOPLE"
+		],
+		"methods": [
+			"step_06"
+		]
+	},
+	"step_07_フォーム": {
+		"methods": [
+			"step_07_Contact",
+			"step_07_Person",
+			"step_07_Student"
+		],
+		"forms": [
+			"Contact",
+			"Person",
+			"Student"
+		],
+		"classes": [
+			"ContactForm",
+			"PersonForm",
+			"StudentForm"
+		]
+	},
+	"trash": {}
+}
