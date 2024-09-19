@@ -1,9 +1,11 @@
 {
 	"privileges": [
 		{
-			"privilege": "none",
-			"includes": []
-		}
+			"privilege": "none"
+		},
+        {
+            "privilege": "people"
+        }
 	],
 	
 	"roles": [],
@@ -13,14 +15,25 @@
 			{
 				"applyTo":"ds",
 				"type": "datastore",
-				"read": ["none"],
+				"read": ["people"],
 				"create": ["none"],
 				"update": ["none"],
 				"drop": ["none"],
-				"describe": ["none"],
+				"describe": ["people"],
 				"execute": ["none"],
 				"promote": ["none"]
-			}
+			},
+            {
+                "applyTo":"ds.顧客",
+                "type": "dataclass",
+                "read": ["people"],
+                "create": ["people"],
+                "update": ["people"],
+                "drop": ["people"],
+                "describe": ["people"],
+                "execute": ["people"],
+                "promote": ["people"]
+            }
 		]
 	},
 
