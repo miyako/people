@@ -9,6 +9,10 @@
 * インポート済データファイル
  * [people.4DD](https://github.com/miyako/people/releases/tag/people.4DD) 
 
+#### 主要な例題
+
+* [people](https://github.com/miyako/people/tree/main/people/)
+
 #### 例題いろいろ
 
 * [Google Mapsと連携](https://github.com/miyako/4d-topic-google-maps)
