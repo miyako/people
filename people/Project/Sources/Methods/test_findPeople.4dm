@@ -1,0 +1,2 @@
+//%attributes = {}
+findPeople("う")

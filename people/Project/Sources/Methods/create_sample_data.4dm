@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 $全顧客:=ds:C1482.顧客.all()
 $顧客数:=ds:C1482.顧客.getCount()
 $全商品:=ds:C1482.商品.all()

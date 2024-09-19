@@ -1,5 +1,15 @@
 Class extends DataStoreImplementation
 
+exposed Function authentify($params : Object) : Object
+	
+	$status:={success: False:C215}
+	
+	If ($params.token="givemeaccess")
+		$status.success:=Session:C1714.setPrivileges($params.privileges)
+	End if 
+	
+	return $status
+	
 local Function findWindowByTitle($windowTitle : Text) : Integer
 	
 	ARRAY LONGINT:C221($windows; 0)
