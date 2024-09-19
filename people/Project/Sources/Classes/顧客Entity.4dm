@@ -30,7 +30,7 @@ local Function get 表示名() : Text
 	
 	return This:C1470.名前+"（"+This:C1470.名前フリガナ+"）"
 	
-local Function get 年齢() : Integer
+exposed Function get 年齢() : Integer
 	
 	return ds:C1482.年齢(Current date:C33; This:C1470.生年月日)
 	
