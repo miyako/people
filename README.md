@@ -1,5 +1,24 @@
 # トレーニング@滝沢市IPUイノベーションセンター
 
+#### サンプルデータベースアプリケーション
+
+* インポート用データファイル（顧客・ヘッダー行あり）
+ * [data.txt](https://github.com/miyako/people/releases/tag/data.txt)
+* インポート用データファイル（商品・ヘッダー行なし）
+ * [products.txt](https://github.com/miyako/people/releases/tag/products.txt)
+* インポート済データファイル
+ * [people.4DD](https://github.com/miyako/people/releases/tag/people.4DD) 
+
+#### 例題いろいろ
+
+* [Google Mapsと連携](https://github.com/miyako/4d-topic-google-maps)
+* [OpenAIと連携](https://github.com/miyako/4d-class-openai)
+* [SVGでハガキ出力](https://github.com/miyako/4d-tips-print-with-svg)
+* [よみがな取得](https://github.com/miyako/4d-plugin-x-phonetic)
+* [Macで顔認証](https://github.com/miyako/4d-plugin-x-phonetic)
+* [WebSocketsクライアントで暗号通過の価格を受信](https://github.com/miyako/4d-class-websocket-client)
+* [WebSocketsサーバーでチャット](https://github.com/miyako/4d-class-websocket-server)
+
 #### リモートプロシージャーコールの例題`3`種
 
 * [Open datastore](https://developer.4d.com/docs/ja/API/DataStoreClass/#open-datastore)
