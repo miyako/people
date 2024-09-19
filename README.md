@@ -1,5 +1,14 @@
 # トレーニング@滝沢市IPUイノベーションセンター
 
+#### サンプルデータベースアプリケーション
+
+* インポート用データファイル（顧客・ヘッダー行あり）
+ * [data.txt](https://github.com/miyako/people/releases/tag/data.txt)
+* インポート用データファイル（商品・ヘッダー行なし）
+ * [products.txt](https://github.com/miyako/people/releases/tag/products.txt)
+* インポート済データファイル
+ * [people.4DD(https://github.com/miyako/people/releases/tag/people.4DD) 
+
 #### リモートプロシージャーコールの例題`3`種
 
 * [Open datastore](https://developer.4d.com/docs/ja/API/DataStoreClass/#open-datastore)
