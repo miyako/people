@@ -7,7 +7,7 @@
 * インポート用データファイル（商品・ヘッダー行なし）
  * [products.txt](https://github.com/miyako/people/releases/tag/products.txt)
 * インポート済データファイル
- * [people.4DD(https://github.com/miyako/people/releases/tag/people.4DD) 
+ * [people.4DD](https://github.com/miyako/people/releases/tag/people.4DD) 
 
 #### リモートプロシージャーコールの例題`3`種
 
