@@ -19,6 +19,10 @@
 * [WebSocketsクライアントで暗号通過の価格を受信](https://github.com/miyako/4d-class-websocket-client)
 * [WebSocketsサーバーでチャット](https://github.com/miyako/4d-class-websocket-server)
 
+#### オブジェクト指向プログラミングの基本
+
+* [introduction-to-oop](https://github.com/miyako/people/tree/main/introduction-to-oop/)
+
 #### リモートプロシージャーコールの例題`3`種
 
 * [Open datastore](https://developer.4d.com/docs/ja/API/DataStoreClass/#open-datastore)
@@ -27,6 +31,7 @@
   * サーバーはHTTPサーバーを起動にする
   * サーバーは`roles.json`で権限を設定する
   * サーバーは`ds.authentify`を実装する
+  * サーバーは啓作属性を`exposed`に設定する
     * [呼び出し](https://github.com/miyako/people/blob/main/remote-people/Project/Sources/Methods/test_ds.4dm)
 * [SOAP (Web Services)](https://doc.4d.com/4Dv20R5/4D/20-R5/Web-Services-Server.201-6817265.ja.html)
   * サーバーはメソッドをWebサービスで公開する
