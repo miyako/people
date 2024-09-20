@@ -20,7 +20,7 @@
 * [SVGでハガキ出力](https://github.com/miyako/4d-tips-print-with-svg)
 * [よみがな取得](https://github.com/miyako/4d-plugin-x-phonetic)
 * [Macで顔認証](https://github.com/miyako/4d-plugin-x-phonetic)
-* [WebSocketsクライアントで暗号通過の価格を受信](https://github.com/miyako/4d-class-websocket-client)
+* [WebSocketsクライアントで暗号通貨の価格を受信](https://github.com/miyako/4d-class-websocket-client)
 * [WebSocketsサーバーでチャット](https://github.com/miyako/4d-class-websocket-server)
 
 #### オブジェクト指向プログラミングの基本
