@@ -35,7 +35,7 @@
   * サーバーはHTTPサーバーを起動にする
   * サーバーは`roles.json`で権限を設定する
   * サーバーは`ds.authentify`を実装する
-  * サーバーは啓作属性を`exposed`に設定する
+  * サーバーは属性を`exposed`に設定する
     * [呼び出し](https://github.com/miyako/people/blob/main/remote-people/Project/Sources/Methods/test_ds.4dm)
 * [SOAP (Web Services)](https://doc.4d.com/4Dv20R5/4D/20-R5/Web-Services-Server.201-6817265.ja.html)
   * サーバーはメソッドをWebサービスで公開する
